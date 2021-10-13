@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    @entryPointStyles('app')
+</head>
+<body class="flex flex-col min-h-screen">
+    @include('partials/navbar')
+    <div class="flex-grow container p-1 sm:mx-auto md:mx-auto lg:mx-auto mb-5">
+        @include('partials/alert')
+        <div class=" grid grid-cols-12 gap-4 grid-auto-row mt-5">
+            <div class="col-span-12 lg:col-span-9">
+                @section('content-1')
+    
+                @end
+            </div>
+            <div class="col-span-12 lg:col-span-3">
+                @section('aside-1')
+    
+                @end
+    
+            </div>
+        </div>
+        <div class=" grid grid-cols-12 gap-4 grid-auto-row mt-5">
+            <div class="col-span-12 lg:col-span-9">
+                @section('content-2')
+    
+                @end
+            </div>
+            <div class="col-span-12 lg:col-span-3">
+                @section('aside-2')
+    
+                @end
+    
+            </div>
+        </div>
+    </div>
+    @include('partials/footer')
+    @entryPointScripts('app')
+
+</body>
+</html>

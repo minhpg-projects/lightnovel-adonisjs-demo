@@ -1,0 +1,6 @@
+{
+  "assets/app.css": "http://localhost:8080/assets/app.css",
+  "assets/app.js": "http://localhost:8080/assets/app.js",
+  "assets/slider.js": "http://localhost:8080/assets/slider.js",
+  "assets/reader.js": "http://localhost:8080/assets/reader.js"
+}

@@ -1,0 +1,61 @@
+<nav class="lg:container lg:mx-auto flex justify-between flex-wrap py-4 lg:py-2 lg:mt-5 lg:rounded-box shadow bg-base-300" x-data="{open:false}">
+  <div class="flex items-center flex-shrink-0 ml-7">
+     <a href="/">
+      <span class="text-2xl font-black leading-none select-none">kyun<span class="text-primary">.</span></span>
+     </a>
+  </div>
+    <div class="block lg:hidden">
+     <button class="flex items-center px-3 py-2 rounded" @click="open=!open">
+        <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+        </svg>
+     </button>
+    </div>
+  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto transition-transform" :class="open ? '' : 'hidden' ">
+     <div class="lg:flex-grow mx-7">
+        <a href="#" class="block mt-4 lg:inline-block lg:mt-0 font-medium leading-6 mr-5 hover:text-primary transition-colors">
+        Sáng tác
+        </a>
+        <a href="#" class="block mt-4 lg:inline-block lg:mt-0 font-medium leading-6 mr-5 hover:text-primary transition-colors">
+        Convert
+        </a>
+        <a href="#" class="block mt-4 lg:inline-block lg:mt-0 font-medium leading-6 mr-5 hover:text-primary transition-colors">
+        Xuất bản
+        </a>
+        <a href="#" class="block mt-4 lg:inline-block lg:mt-0 font-medium leading-6 mr-5 hover:text-primary transition-colors">
+        Thảo luận
+        </a>
+        <a href="#" class="block mt-4 lg:inline-block lg:mt-0 font-medium leading-6 mr-5 hover:text-primary transition-colors">
+        Danh sách
+        </a>
+        <div title="Change Theme" class="dropdown dropdown-right">
+         <a tabindex="0" class="block mt-4 lg:inline-block lg:mt-0 font-medium leading-6 mr-5 hover:text-primary transition-colors">
+            <div class="flex">
+              Đổi theme
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+           </a>
+         <div class="overflow-y-auto shadow-2xl top-px dropdown-content h-96 w-52 rounded-box bg-base-100 text-base-content">
+            @include('partials/themeSwitcher')
+         </div>
+      </div>
+     
+    
+     </div>
+     <div class="flex rounded-box mx-3 my-5 lg:my-0  bg-base-100">
+        <input class="rounded-box w-full py-2 px-4 leading-tight focus:outline-none text-neutral-focus" id="search" type="text" placeholder="Tìm kiếm">
+        <div class="p-1">
+           <button class="focus:outline-none w-10 h-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+           </button>
+        </div>
+     </div>
+  </div>
+  </div>
+  </div>
+</nav>
+

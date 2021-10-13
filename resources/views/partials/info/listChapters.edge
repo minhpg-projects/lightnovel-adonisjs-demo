@@ -1,0 +1,42 @@
+<div class="shadow bg-base-200 rounded-box mt-5 p-1">
+    <div class="overflow-x-auto m-5 shadow-xl rounded-box" x-data="{ tab: 1 }">
+        <div class="tabs font-bold">
+            <a class="tab tab-lg tab-bordered" :class="{'tab-active' : tab == 1 }" @click="tab = 1" >Arc 1</a> 
+            <a class="tab tab-lg tab-bordered" :class="{'tab-active' : tab == 2 }" @click="tab = 2" >Arc 2</a> 
+            <a class="tab tab-lg tab-bordered" :class="{'tab-active' : tab == 3 }" @click="tab = 3" >Arc 3</a>
+          </div>
+        <table class="table w-full">
+          <tbody x-show="tab==1" x-transition>
+              <template x-for="index in 10">
+                <tr>
+                    <td>
+                        <a href="" class="hover:text-primary font-bold"  x-text="`Chương ${index}: Chuyến đi dã ngoại`"></a>
+                     </td>
+                    <td>24/08/2019</td>
+                </tr>
+              </template>
+          </tbody>
+          <tbody x-show="tab==2" x-transition>
+            <template x-for="index in 10">
+                <tr>
+                    <td>
+                        <a href="" class="hover:text-primary font-bold"  x-text="`Chương ${index}: Chuyến đi dã ngoại`"></a>
+                     </td>
+                    <td>24/08/2019</td>
+                </tr>
+              </template>
+      </tbody>
+      <tbody x-show="tab==3" x-transition>
+        <template x-for="index in 10">
+            <tr>
+                <td>
+                    <a href="" class="hover:text-primary font-bold"  x-text="`Chương ${index}: Chuyến đi dã ngoại`"></a>
+                 </td>
+                <td>24/08/2019</td>
+            </tr>
+          </template>
+  </tbody>
+        </table>
+    </div>
+      
+</div>
